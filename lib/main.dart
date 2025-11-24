@@ -1,28 +1,96 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-class book {
+class Book{
   final String title;
   final String category;
   final String description;
   final String image; // we are doing this  is for the asset path
   final double rating;
 
-}
-book ({
+
+Book({
   required this.title,
   required this.category,
   required this.description,
   required this.image,
-  required this.rating.
+  required this.rating,
 
-})
+});
+}
+
  final list<Book> books =[
+Book(
  title: "Fake skating",
  category: "Teen Romance",
  description:"11",
  image:"",
  rating:4.5,
+),
+Book(
+ title: "Better than the movies",
+ category: "Romance/comedy",
+ description:"11",
+ image:"",
+ rating:4.5,
+),
+Book(
+ title: "The do over",
+ category: "Romance/comedy",
+ description:"11",
+ image:"",
+ rating:4.2,
+),
+Book(
+ title: "Five survive",
+ category: "Thriller",
+ description:"11",
+ image:"",
+ rating:4.8,
+),
+
+Book(
+ title: "good girl's guide to murder",
+ category: "Thriller ",
+ description:"11",
+ image:"",
+ rating:4.5,
+),
+Book(
+ title: "One of us is lying",
+ category: "Thriller/horror ",
+ description:"11",
+ image:"",
+ rating:4.7,
+),
+Book(
+ title: "One of us is lying",
+ category: "Thriller/horror ",
+ description:"11",
+ image:"",
+ rating:4.7,
+),
+Book(
+ title: "Harry potter",
+ category: "Thriller/Fantasy ",
+ description:"11",
+ image:"",
+ rating:4.7,
+),
+Book(
+ title: "The cruel prince ",
+ category: "Thriller/Fantasy ",
+ description:"11",
+ image:"",
+ rating:4.5,
+),
+Book(
+ title: "Lightlark",
+ category: "Thriller/Fantasy",
+ description:"11",
+ image:"",
+ rating:4.7,
+),
 
  ]
 
