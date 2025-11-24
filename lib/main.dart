@@ -7,29 +7,21 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 255, 222, 236),
         appBar: AppBar(
           title: Text(
             "Book community",
             style: const TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 232, 222, 222),
+          backgroundColor: const Color.fromARGB(255, 237, 190, 253),
         ),
-          body: Container(
-          decoration: BoxDecoration(
-           image: DecorationImage (
-            image: AssetImage('assets/leahedit.jpg'),
-           fit : BoxFit.cover,
-           ),
-          ),
-           child: Listview(),
-        ),
+        body: Listview(),
+
       ),
     );
   }

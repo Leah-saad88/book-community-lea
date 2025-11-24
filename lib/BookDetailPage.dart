@@ -18,10 +18,11 @@ class NewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 250, 226, 236), 
       appBar: AppBar(
         title: Text(title),
         centerTitle: true,
-        backgroundColor: const Color.fromARGB(255, 221, 225, 228),
+        backgroundColor:  const Color.fromARGB(255, 237, 190, 253),
       ),
       body: Center(
         child: Column(
@@ -31,7 +32,7 @@ class NewPage extends StatelessWidget {
             Image.asset(image, width: 200, height: 200),
             Text(
               description,
-              style: TextStyle(fontSize: 17 ,color: Colors.black12),
+              style: TextStyle(fontSize: 17 ,color: const Color.fromARGB(255, 0, 0, 0), height: 1.5, fontWeight: FontWeight.w500,),
             )
           ],
         ),
