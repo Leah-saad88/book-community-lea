@@ -54,6 +54,17 @@ flutter:
 
   assets:
     - assets/leahedit.jpg
+    - assets/fk.jpg
+    - assets/mv.webp
+    - assets/st.jfif
+    - assets/on.jfif
+    - assets/fs.jfif
+    - assets/fd.jpg
+    - assets/lt.jpg
+    - assets/hr.jpg
+    - assets/cr.webp
+    
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
