@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-       backgroundColor: const Color.fromARGB(255, 227, 194, 163),
+        backgroundColor: const Color.fromARGB(255, 227, 194, 163),
         appBar: AppBar(
           title: Text(
             "The Reading Haven 📚✨",
@@ -20,8 +20,23 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           backgroundColor: const Color(0xFFF5F5DC),
         ),
-         body: Listview(),
+        body: Column(
+          children: [
+            const SizedBox(height: 16),
+            const Text(
+              "Welcome to your cozy corner of stories 📖☕",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.black87,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 19),
+            Expanded(child: Listview()),
 
+          ],
+        ),
       ),
     );
   }
