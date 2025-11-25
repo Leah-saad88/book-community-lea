@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
        backgroundColor: const Color.fromARGB(255, 227, 194, 163),
         appBar: AppBar(
           title: Text(
-            "Book community",
+            "The Reading Haven 📚✨",
             style: const TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
           ),
           centerTitle: true,
