@@ -20,7 +20,14 @@ class NewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(
+          title,
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+            color: Colors.black87,
+          ),
+        ),
         centerTitle: true,
         backgroundColor: const Color(0xFFF5F5DC),
       ),
@@ -31,10 +38,10 @@ class NewPage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-
         child: Center(
           child: Column(
             children: [
+              const SizedBox(height: 44),
               Text(
                 category,
                 style: TextStyle(
@@ -71,16 +78,18 @@ class NewPage extends StatelessWidget {
                   ),
                 ],
               ),
-
-              Text(
-                description,
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 1.2,
-                  color: Colors.black,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: Text(
+                  description,
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1.2,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
             ],
           ),
