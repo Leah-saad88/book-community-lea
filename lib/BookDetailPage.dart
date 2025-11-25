@@ -46,6 +46,32 @@ class NewPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Image.asset(image, width: 200, height: 200),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "⭐" * rating.floor(), // repeat emoji stars
+                    style: const TextStyle(fontSize: 22),
+                  ),
+                  if (rating % 1 != 0)
+                    const Text(
+                      "⭐",
+                      style: TextStyle(fontSize: 22),
+                    ), // half star if needed
+                  const SizedBox(width: 8),
+
+                  Text(
+                    rating.toString(), // show numeric rating like "4.7"
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
+              ),
+
               Text(
                 description,
                 style: TextStyle(
@@ -54,6 +80,7 @@ class NewPage extends StatelessWidget {
                   letterSpacing: 1.2,
                   color: Colors.black,
                 ),
+                textAlign: TextAlign.center,
               ),
             ],
           ),
