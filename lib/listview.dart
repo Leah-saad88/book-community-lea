@@ -98,7 +98,7 @@ class _ListviewState extends State<Listview> {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
             crossAxisSpacing: 9,
-            mainAxisSpacing: 9,
+            mainAxisSpacing: 11,
             childAspectRatio: 0.75,
           ),
           itemBuilder: (context, index) {
@@ -136,7 +136,7 @@ class _ListviewState extends State<Listview> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(5),
                         child: Image.asset(
                           current['image']!,
                           width: 70,
