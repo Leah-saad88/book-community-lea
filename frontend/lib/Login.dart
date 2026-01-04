@@ -67,7 +67,7 @@ class LoginPageState extends State<LoginPage> {
           SnackBar(content: Text(data["message"] ?? "Login successful!")),
         );
 
-        
+        // Clear form and favorites
         emailController.clear();
         passwordController.clear();
         nameController.clear();
@@ -122,7 +122,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 20),
 
-                    
+                    // Email
                     TextField(
                       controller: emailController,
                       decoration: const InputDecoration(
@@ -132,7 +132,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 16),
 
-                    
+                    // Password
                     TextField(
                       controller: passwordController,
                       decoration: const InputDecoration(
@@ -143,7 +143,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 16),
 
-                    
+                    // Name
                     TextField(
                       controller: nameController,
                       decoration: const InputDecoration(
@@ -153,7 +153,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 16),
 
-                    
+                    // Address
                     TextField(
                       controller: addressController,
                       decoration: const InputDecoration(
@@ -174,7 +174,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 20),
 
-                    
+                    // Total
                     Text(
                       "Total: \$${total.toStringAsFixed(2)}",
                       style: const TextStyle(
@@ -184,7 +184,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 16),
 
-                    
+                    // Login & Checkout Button
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -197,7 +197,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 12),
 
-                    
+                    // Sign Up
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

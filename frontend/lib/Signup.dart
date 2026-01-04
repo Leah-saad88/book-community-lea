@@ -31,7 +31,9 @@ class SignupPageState extends State<SignupPage> {
       return;
     }
 
-    setState(() => isLoading = true);
+    setState(() {
+      isLoading = true;
+    });
 
     try {
       final response = await http.post(
@@ -45,18 +47,17 @@ class SignupPageState extends State<SignupPage> {
         }),
       );
 
-      setState(() => isLoading = false);
+      setState(() {
+        isLoading = false;
+      });
 
       final data = jsonDecode(response.body);
 
       if (response.statusCode == 200) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text("Signup successful! Please contiue the log in process"),
-          ),
+          SnackBar(content: Text(data["message"])),
         );
 
-        
         nameController.clear();
         emailController.clear();
         passwordController.clear();
@@ -69,11 +70,13 @@ class SignupPageState extends State<SignupPage> {
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(data['message'] ?? "Signup failed")),
+          SnackBar(content: Text(data["message"] ?? "Signup failed")),
         );
       }
     } catch (e) {
-      setState(() => isLoading = false);
+      setState(() {
+        isLoading = false;
+      });
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Error: $e")),
       );
@@ -98,13 +101,14 @@ class SignupPageState extends State<SignupPage> {
                 const Text(
                   "Create Account",
                   style: TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent),
+                    fontSize: 26,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blueAccent,
+                  ),
                 ),
                 const SizedBox(height: 20),
 
-                
+                // Name
                 TextField(
                   controller: nameController,
                   decoration: const InputDecoration(
@@ -114,7 +118,7 @@ class SignupPageState extends State<SignupPage> {
                 ),
                 const SizedBox(height: 16),
 
-                
+                // Email
                 TextField(
                   controller: emailController,
                   decoration: const InputDecoration(
@@ -135,7 +139,7 @@ class SignupPageState extends State<SignupPage> {
                 ),
                 const SizedBox(height: 16),
 
-                
+                // Address
                 TextField(
                   controller: addressController,
                   decoration: const InputDecoration(
@@ -145,7 +149,7 @@ class SignupPageState extends State<SignupPage> {
                 ),
                 const SizedBox(height: 16),
 
-                
+                // Zip
                 TextField(
                   controller: zipController,
                   decoration: const InputDecoration(
