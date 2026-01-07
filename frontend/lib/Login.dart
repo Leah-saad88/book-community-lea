@@ -184,7 +184,7 @@ class LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 16),
 
-                    // Login & Checkout Button
+                    
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -196,8 +196,6 @@ class LoginPageState extends State<LoginPage> {
                       ),
                     ),
                     const SizedBox(height: 12),
-
-                    // Sign Up
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
