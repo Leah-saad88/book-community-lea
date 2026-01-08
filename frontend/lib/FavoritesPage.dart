@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Books.dart';
-import 'Login.dart'; // keep your existing navigation
-// favorites list is imported from Books.dart
+import 'Login.dart'; 
+
 
 class FavoritesPage extends StatefulWidget {
   final int userId;
@@ -36,7 +36,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
   }
 
   void checkout() {
-    // keeps your existing logic
+    
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (_) => const LoginPage()),
@@ -60,7 +60,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                 return Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Container(
-                    height: 150, // bigger card
+                    height: 150, 
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(16),
@@ -74,7 +74,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
                     ),
                     child: Row(
                       children: [
-                        // Book image
+                        
                         ClipRRect(
                           borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(16),

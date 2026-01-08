@@ -211,7 +211,7 @@ class _BookCardState extends State<BookCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: widget.onTap, // whole card → detail page
+      onTap: widget.onTap, 
       child: Container(
         decoration: BoxDecoration(
           color: Colors.white,

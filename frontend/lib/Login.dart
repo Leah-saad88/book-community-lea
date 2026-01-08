@@ -45,7 +45,7 @@ class LoginPageState extends State<LoginPage> {
 
     try {
       final response = await http.post(
-        Uri.parse("http://10.0.2.2:5000/login"),
+        Uri.parse("https://book-community-lea.onrender.com/login"),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode({
           "email": emailController.text,
